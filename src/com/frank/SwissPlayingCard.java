@@ -19,7 +19,7 @@ public class SwissPlayingCard extends PlayingCard {
                 //            ie. no object required
         };
         public static enum CardValue {  // Using the fact that enums are really integers inside value to name our values
-                JOKER, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, UNUSED1, UNUSED2, TEN, FANTE, CAVALLO, RE
+                JOKER, ONE, UNUSED2, UNUSED3, UNUSED4, UNUSED5, SIX, SEVEN, EIGHT, NINE, BANNER, UNDER, OBER, KOENIG
         };
 
         private static final CardValue DEFAULTCARDVALUE = CardValue.JOKER;
@@ -40,7 +40,8 @@ public class SwissPlayingCard extends PlayingCard {
 
 
                 // Verify value passed is valid, if not set value to default value
-                if (value == CardValue.UNUSED1 || value == CardValue.UNUSED2 ) {   // Italian Playing cards have no 8 or 9
+                if (value == CardValue.UNUSED2 || value == CardValue.UNUSED3 
+                 || value == CardValue.UNUSED4 || value == CardValue.UNUSED5 ) {   // Swiss Playing cards have no 2, 3, 4 or 5
                         setValue(DEFAULTCARDVALUE.ordinal());
                 }
 
