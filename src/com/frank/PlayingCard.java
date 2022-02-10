@@ -1,6 +1,6 @@
 package com.frank;
 
-public class PlayingCard {
+public abstract class PlayingCard {
 	
 	private int value;    
 	private String color;    
@@ -78,6 +78,6 @@ public class PlayingCard {
 	}
 
 // super class is required to have any method where Polymorphism might be used - even if it doesn't need it
-public void showCard() {} // required for Polymorphism to work - even though it does nothing - we will address this tomorrow!
+public abstract void showCard(); // required for Polymorphism to work - even though it does nothing - we will address this tomorrow!
 
 } // End of PlayingCard class
